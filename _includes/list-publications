@@ -1,0 +1,86 @@
+{% comment %}
+*
+* Possible parameter for this loop:
+*
+* › entries
+* › offset
+* › category
+* › tag
+*
+* Example for Category: {% include list-posts entries='3' offset='1' category='design' %}
+*
+* Example for Tag: {% include list-posts entries='5' tag='terminal' %}
+*
+*
+* This loop works like this:
+*
+* 1. First we check if there was given a category for filtering › if include.categories == NULL
+* 2. If no category is given for filtering do a general loop.
+* 3. If a category/tag was given, assign category/tag to the variable category/tag › assign category =
+include.categories
+*
+{% endcomment %}
+
+{% assign category = include.category %}
+{% assign tag = include.tag %}
+{% assign publications = site.[include.collection] | sort: 'pub_date' | reverse %}
+<ul class="side-nav">
+
+  {% if category == NULL and tag == NULL %}
+
+  {% for post in publications limit:include.entries offset:include.offset %}
+  <li>
+    <br>
+    <p class="subheadline">{{ post.categories | join: ' &middot; ' | prepend: '<span class="subheader">' | append: '</span>' }}{% if post.categories != empty and post.subheadline != NULL %} – {% endif %}{{ post.subheadline }}</p>
+    <h6><strong>{{ post.title }}</strong></h6>
+    <i>
+      <h7>{{ post.authors }}</h7>
+    </i> <br><br>
+    <strong>Publicado em:</strong> {{ post.pub_date | date: "%d/%m/%Y" }} <br>
+    <strong>Periódico:</strong><i> {{ post.journal }}</i> <br>
+    <div id="publication_space">
+      <a href="{{ post.pub_link }}" id="website_button" target="_blank"><b>Página do artigo</b></a>
+      <a href="javascript:void(0)" id="id_button" data-copy="{{ post.pub_id }}" onclick="copyToClipboardWithSnackbar(this)">{{post.id_type}}</a>
+    </div>
+    <br>
+  </li>
+  {% endfor %}
+
+
+  {% elsif category %}
+
+  {% for post in site.categories.[category] limit:include.entries offset:include.offset %}
+  <li>
+    <h6><strong>{{ post.title }}</strong></h6>
+    <i>
+      <h7>{{ post.authors }}</h7>
+    </i> <br><br>
+    <strong>Publicado em:</strong> {{ post.pub_date }} <br>
+    <strong>Periódico:</strong><i> {{ post.journal }}</i> <br>
+    <div id="publication_space">
+      <a href="{{ post.pub_link }}" id="website_button" target="_blank"><b>Link do artigo</b></a>
+      <a href="#" id="id_button">{{ post.pub_id }}</a>
+    </div>
+  </li>
+  {% endfor %}
+
+
+  {% elsif tag %}
+
+  {% for post in site.tags.[tag] limit:include.entries %}
+  <li>
+    <h6><strong>{{ post.title }}</strong></h6>
+    <i>
+      <h7>{{ post.authors }}</h7>
+    </i> <br><br>
+    <strong>Publicado em:</strong> {{ post.pub_date }} <br>
+    <strong>Periódico:</strong><i> {{ post.journal }}</i> <br>
+    <div id="publication_space">
+      <a href="{{ post.pub_link }}" id="website_button" target="_blank"><b>Link do artigo</b></a>
+      <a href="#" id="id_button">{{ post.pub_id }}</a>
+    </div>
+  </li>
+  {% endfor %}
+
+  {% endif %}
+</ul>

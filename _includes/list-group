@@ -1,0 +1,188 @@
+{% comment %}
+*
+* Possible parameter for this loop:
+*
+* › entries
+* › offset
+* › category
+* › tag
+*
+* Example for Category: {% include list-posts entries='3' offset='1' category='design' %}
+*
+* Example for Tag: {% include list-posts entries='5' tag='terminal' %}
+*
+*
+* This loop works like this:
+*
+* 1. First we check if there was given a category for filtering › if include.categories == NULL
+* 2. If no category is given for filtering do a general loop.
+* 3. If a category/tag was given, assign category/tag to the variable category/tag › assign category =
+include.categories
+*
+{% endcomment %}
+
+{% assign category = include.category %}
+{% assign tag = include.tag %}
+<ul class="side-nav">
+
+  {% if category == NULL and tag == NULL %}
+
+  {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
+  {% if post.name == "Ana Maria Caetano Faria" or post.name == "Cláudia Ida Brodskyn" %}
+
+  <li>
+    <div class="group_img">
+      {% if post.photo %}
+      <img src="{{ site.urlimg }}{{ post.photo }}" alt="{{ post.name escape_once }}">
+      {% endif %}
+      <div class="text-block">
+        <h4><strong>{{ post.name }}</strong></h4>
+        {% if post.research %} <sup>{{ post.research }}</sup> <br> {% endif %}
+        <b>Instituição:</b> {{ post.institution }} <br>
+        {% if post.group_name %} <b> Grupo de Pesquisa: </b> {{ post.group_name }} <br> {% endif %}
+        <p> 
+          <br> {{ post.description }} <br>
+          <sup> {{ post.desc_source }} </sup> <br>
+          {% if post.website %}
+          <a href="{{ post.website }}" id="groupsite_button" target="_blank"><b>Página do grupo</b></a>
+          {% endif %}
+          {% if post.include_email %}
+          <a href="javascript:void(0)" id="email_button" data-copy="{{ post.email }}" onclick="copyToClipboardWithSnackbar(this)"><b>E-mail</b></a>
+          {% endif %}
+          {% if post.lattes %}
+          <a href="{{ post.lattes }}" id="lattes_button" target="_blank"><b>Lattes</b></a>
+          {% endif %}
+          {% if post.instagram %}
+          <a href="{{ post.instagram }}" id="instagram_button" target="_blank"><b>Instagram</b></a>
+          {% endif %}
+          {% if post.twitter %}
+          <a href="{{ post.twitter }}" id="twitter_button" target="_blank"><b>X (Twitter)</b></a>
+          {% endif %}
+          
+        </p>
+    </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+  {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
+  {% if post.name != "Ana Maria Caetano Faria" and post.name != "Cláudia Ida Brodskyn" %}
+  <li>
+    <div class="group_img">
+      {% if post.photo %}
+      <img src="{{ site.urlimg }}{{ post.photo }}" alt="{{ post.name escape_once }}">
+      {% endif %}
+      <div class="text-block">
+        <h4><strong>{{ post.name }}</strong></h4>
+        {% if post.research %} <sup>{{ post.research }}</sup> <br> {% endif %}
+        <b>Instituição:</b> {{ post.institution }} <br>
+        {% if post.group_name %} <b> Grupo de Pesquisa: </b> {{ post.group_name }} <br> {% endif %}
+        <p> 
+          <br> {{ post.description }} <br>
+          <sup> {{ post.desc_source }} </sup> <br>
+          {% if post.website %}
+          <a href="{{ post.website }}" id="groupsite_button" target="_blank"><b>Página do grupo</b></a>
+          {% endif %}
+          {% if post.include_email %}
+          <a href="javascript:void(0)" id="email_button" data-copy="{{ post.email }}" onclick="copyToClipboardWithSnackbar(this)"><b>E-mail</b></a>
+          {% endif %}
+          {% if post.lattes %}
+          <a href="{{ post.lattes }}" id="lattes_button" target="_blank"><b>Lattes</b></a>
+          {% endif %}
+          {% if post.instagram %}
+          <a href="{{ post.instagram }}" id="instagram_button" target="_blank"><b>Instagram</b></a>
+          {% endif %}
+          {% if post.twitter %}
+          <a href="{{ post.twitter }}" id="twitter_button" target="_blank"><b>X (Twitter)</b></a>
+          {% endif %}
+          
+        </p>
+    </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+
+  {% elsif category %}
+
+  {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
+  {% if post.name == "Ana Maria Caetano Faria" | post.name == "Cláudia Ida Brodskyn" %}
+
+  <li>
+    <div class="group_img">
+      {% if post.photo %}
+      <img src="{{ site.urlimg }}{{ post.photo }}" alt="{{ post.name escape_once }}">
+      {% endif %}
+      <div class="text-block">
+        <h4><strong>{{ post.name }}</strong></h4>
+        <sup>{{ post.research }}</sup> <br>
+        <b>Instituição:</b> {{ post.institution }} <br>
+        <b> Grupo de Pesquisa: </b> {{ post.group_name }} <br>
+        <p> 
+          <br> {{ post.description }} <br>
+          <sup> {{ post.desc_source }} </sup> <br>
+          {% if post.website %}
+          <a href="{{ post.website }}" id="groupsite_button" target="_blank"><b>Página do grupo</b></a>
+          {% endif %}
+          {% if post.include_email %}
+          <a href="javascript:void(0)" id="email_button" data-copy="{{ post.email }}" onclick="copyToClipboardWithSnackbar(this)"><b>E-mail</b></a>
+          {% endif %}
+          {% if post.lattes %}
+          <a href="{{ post.lattes }}" id="lattes_button" target="_blank"><b>Lattes</b></a>
+          {% endif %}
+          {% if post.instagram %}
+          <a href="{{ post.instagram }}" id="instagram_button" target="_blank"><b>Instagram</b></a>
+          {% endif %}
+          {% if post.twitter %}
+          <a href="{{ post.twitter }}" id="twitter_button" target="_blank"><b>X (Twitter)</b></a>
+          {% endif %}
+          
+        </p>
+    </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+  {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
+  {% if post.name != "Ana Maria Caetano Faria" & post.name != "Cláudia Ida Brodskyn" %}
+  <li>
+    <div class="group_img">
+      {% if post.photo %}
+      <img src="{{ site.urlimg }}{{ post.photo }}" alt="{{ post.name escape_once }}">
+      {% endif %}
+      <div class="text-block">
+        <h4><strong>{{ post.name }}</strong></h4>
+        <sup>{{ post.research }}</sup> <br>
+        <b>Instituição:</b> {{ post.institution }} <br>
+        <b> Grupo de Pesquisa: </b> {{ post.group_name }} <br>
+        <p> 
+          <br> {{ post.description }} <br>
+          <sup> {{ post.desc_source }} </sup> <br>
+          {% if post.website %}
+          <a href="{{ post.website }}" id="groupsite_button" target="_blank"><b>Página do grupo</b></a>
+          {% endif %}
+          {% if post.include_email %}
+          <a href="javascript:void(0)" id="email_button" data-copy="{{ post.email }}" onclick="copyToClipboardWithSnackbar(this)"><b>E-mail</b></a>
+          {% endif %}
+          {% if post.lattes %}
+          <a href="{{ post.lattes }}" id="lattes_button" target="_blank"><b>Lattes</b></a>
+          {% endif %}
+          {% if post.instagram %}
+          <a href="{{ post.instagram }}" id="instagram_button" target="_blank"><b>Instagram</b></a>
+          {% endif %}
+          {% if post.twitter %}
+          <a href="{{ post.twitter }}" id="twitter_button" target="_blank"><b>X (Twitter)</b></a>
+          {% endif %}
+          
+        </p>
+    </div>
+    </div>
+  </li>
+  {% endif %}
+  {% endfor %}
+
+  {% endif %}
+</ul>
