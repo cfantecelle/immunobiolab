@@ -1,9 +1,9 @@
 ---
 layout              : page
-title               : "Contato"
+title               : "Contact"
 meta_title          : ""
 subheadline         : ""
-teaser              : "Como entrar em contato com o GEMP?"
+teaser              : "Would you like to contact us?"
 permalink           : "/contact/"
 #header:
 #    image_fullwidth: "skin_header_01.png"

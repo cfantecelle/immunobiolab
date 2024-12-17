@@ -1,53 +1,41 @@
-- title: Início
+- title: Start
   url: "/"
   side: left
 
-- title: Sobre Nós
+- title: About us
   url: "/info/"
   side: left
-  dropdown:
-    - title: Histórico
-      url: "/info/#histórico"
-    - title: Linhas de Pesquisa
-      url: "/info/#linhas-de-pesquisa"
-    - title: Integrantes
-      url: "/info/#integrantes"
-    - title: Colaborações
-      url: "/info/#colaborações-internacionais"
 
-
-
-
-- title: Publicações
+- title: Publications
   url: "/publications/"
   side: left
 
-- title: Integrantes
+- title: The group
   url: "/group/"
   side: left
 
-- title: Eventos
+- title: Events
   url: "/events/"
   side: left
   dropdown:
-  - title: "Recentes"
+  - title: "Recent"
     url: "/events/"
-  - title: "Arquivo"
+  - title: "Archive"
     url: "/events/archive/"
 
-- title: Notícias
+- title: News
   url: "/blog/"
   side: left
   dropdown:
-  - title: "Recentes"
+  - title: "Recent"
     url: "/blog/"
-  - title: "Arquivo"
+  - title: "Archive"
     url: "/blog/archive/"
 
-- title: "Busca"
+- title: "Search"
   url: "/search/"
   side: right
 
-- title: "Contato"
+- title: "Contact"
   url: "/contact/"
   side: right

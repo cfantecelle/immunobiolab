@@ -1,8 +1,8 @@
 ---
 permalink: /search/
 layout: page
-title: "Busca"
-teaser: Utilize o campo abaixo para realizar uma busca em nosso site utilizando o Google.
+title: "Search"
+teaser: Use the field below to search the website using google.
 sitemap: false
 # header:
 #     image_fullwidth: "skin_header_01.png"

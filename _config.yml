@@ -14,14 +14,14 @@ title: 'IMB-Lab'
 slogan: 'Immunobio Lab - UFES'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: 'O Grupo de Estudos em Mucosas e Pele é uma rede colaborativa de pesquisadores dedicados ao estudo das doenças que afetam mucosas e pele, com ênfase em sua patogênese, imunologia e alternativas terapêuticas.'
+description: ''
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :) 
 credits: '<p>Created with &hearts; by <a href="http://github.com/cfantecelle/">cfantecelle</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling_responsive/">Feeling Responsive</a> by <a href="http://phlow.de/">phlow</a>.</p>'
 
 # Main author of the website
 # See > authors.yml
-author: gemp
+author: imblab
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
@@ -181,7 +181,7 @@ defaults:
       show_meta: true   # Show metadata for all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: gemp     # Default author for posts
+      author: imblab     # Default author for posts
   -
     scope:
       path: ''
@@ -191,7 +191,7 @@ defaults:
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
       sort_reverse: true
-      author: gemp     # Default author for posts
+      author: imblab     # Default author for posts
 
 
 
