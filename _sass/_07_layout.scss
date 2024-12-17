@@ -286,6 +286,13 @@ body.video cite { color: #fff; }
         letter-spacing: 1px;
         color: #fff;
         text-transform: uppercase;
+        margin: 0;
+    }
+    #footer p {
+        margin: 0;
+    }
+    #footer ul {
+        margin: 0;
     }
 
 
@@ -296,14 +303,18 @@ body.video cite { color: #fff; }
 #subfooter {
     background: $subfooter-bg;
     color: $subfooter-color;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    
-    p {
-        margin: 0px;
-        text-align: center;
+    padding: 10px 0;
     }
-}
+
+    #subfooter p {
+        margin: 0;
+    }
+
+    #subfooter .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 #subfooter-left ul.inline-list {
     float: left;
@@ -319,8 +330,8 @@ body.video cite { color: #fff; }
 }
 
 .social-icons {
-    margin-bottom: 0px !important; /*original 10px*/
-    
+    margin-bottom: 0px !important;
+
 // Beware of SCSS-Syntax here
   li {
     padding: 0 0 0px 0;

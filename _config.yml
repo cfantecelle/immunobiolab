@@ -41,7 +41,7 @@ baseurl: '/immunobiolab'
 urlimg: 'https://cfantecelle.github.io/immunobiolab/images/'
 
 # Logo size is 600x80 pixels
-logo: "logo.png"
+logo: "immunobiolab_logo.svg"
 
 # Plugins
 plugins:

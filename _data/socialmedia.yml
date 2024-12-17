@@ -1,29 +1,15 @@
-- name: Site Author's GitHub
-  url: http://github.com/cfantecelle
-  class: icon-github
-  title: Website creator
+- name: X/Twitter
+  url: http://x.com/imunobioufes
+  class: icon-twitter
+  title: X/Twitter
 
-# - name: Facebook
-#   url: http://www.facebook.com/
-#   class: icon-facebook
-#   title: ""
+- name: Facebook
+  url: http://www.facebook.com/imunobioufes
+  class: icon-facebook
+  title: ""
 
-# - name: Soundcloud
-#   url: http://soundcloud.com/
-#   class: icon-soundcloud
-#   title: ""
+- name: Instagram
+  url: http://instagram.com/imunobioufes
+  class: icon-instagram
+  title: ""
 
-# - name: Instagram
-#   url: http://instagram.com/
-#   class: icon-instagram
-#   title: ""
-
-# - name: Pinterest
-#   url: http://www.pinterest.com/
-#   class: icon-pinterest
-#   title: ""
-
-# - name: Xing
-#   url: https://www.xing.com/profile/
-#   class: icon-xing
-#   title: Xing Profil
