@@ -72,8 +72,32 @@ body.video cite { color: #fff; }
     background-color: $primary-color;
 }
 #masthead-no-image-header {
-    background-color: $primary-color;
+    background-color: #FFF;
+    border-bottom: 5px solid $ci-1;
+    border-top: 5px solid $ci-1;
 }
+#masthead-no-image-header .small-12 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;    
+}
+
+#masthead-no-image-header #logo img {
+    margin-top: 0px;
+    object-fit: contain;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+}
+
+#masthead-no-image-header a {
+    margin-top: 0px;
+    width: 750px;
+    height: 250px;
+}
+
 #masthead-with-text {
     text-align: center;
     font-size: rem-calc(54);
@@ -82,12 +106,8 @@ body.video cite { color: #fff; }
     text-transform: uppercase;
     text-shadow: 0 2px 3px rgba(0,0,0,.4);
 }
-#masthead-no-image-header {
-    height: 300px;
-}
-#masthead-no-image-header #logo img {
-    margin-top: 60px;
-}
+
+
 
 /* Masthead › small-only
 ------------------------------------------------------------------- */
