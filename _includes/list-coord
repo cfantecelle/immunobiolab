@@ -28,7 +28,8 @@ include.categories
   {% if category == NULL and tag == NULL %}
 
   {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
-  {% if post.name != "Daniel Cláudio de Oliveira Gomes" %}
+  {% if post.name == "Daniel Cláudio de Oliveira Gomes" %}
+
   <li>
     <div class="group_img">
       {% if post.photo %}
@@ -59,17 +60,16 @@ include.categories
           
         </p>
     </div>
-      
     </div>
   </li>
   {% endif %}
   {% endfor %}
 
-
   {% elsif category %}
 
   {% for post in site.[include.collection] limit:include.entries offset:include.offset %}
-  {% if post.name != "Daniel Cláudio de Oliveira Gomes" %}
+  {% if post.name == "Daniel Cláudio de Oliveira Gomes" %}
+
   <li>
     <div class="group_img">
       {% if post.photo %}

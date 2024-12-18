@@ -5,10 +5,9 @@ title:  ""
 teaser: ""
 abstract: ""
 categories:
-    - Publicações
-    - Artigo
+    - Research Paper
 tags:
-    - Artigo
+    - Research Paper
     -
 header: yes
 
