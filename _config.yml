@@ -140,7 +140,7 @@ exclude:
 
 
 # The language setting is used in /includes/header.html for html-settings
-language: 'pt-br'
+language: 'en'
 
 
 # Used › default.html front-matter and compress.html
@@ -355,7 +355,4 @@ collections:
   group:
     output: false
     sort_by: name
-
-
-
 
